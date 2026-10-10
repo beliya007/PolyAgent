@@ -1,0 +1,16 @@
+# ============ Web 框架 ============
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.0
+sse-starlette>=2.0.0
+
+# ============ LLM 客户端 (OpenAI 原生 API) ============
+openai>=1.40.0
+python-dotenv>=1.0.0
+
+# ============ HTTP 客户端(Java 后端对接) ============
+httpx==0.26.0
+
+# ============ 可选增强 ============
+# numpy>=1.24.0          # 向量计算加速
+# markitdown>=0.0.1    # PDF/DOCX 解析(可选)

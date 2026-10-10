@@ -1,0 +1,85 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hello-agents"
+version = "1.0.0"
+description = "A lightweight, modular multi-agent framework in Python. Inspired by Datawhale's Hello-Agents tutorial and rebuilt from scratch with native OpenAI function calling, FastAPI, MCP/A2A/ANP protocols, and 4 agent paradigms."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Hello-Agents Contributors" },
+]
+keywords = [
+    "agent",
+    "llm",
+    "openai",
+    "function-calling",
+    "multi-agent",
+    "rag",
+    "memory",
+    "mcp",
+    "a2a",
+    "anp",
+    "fastapi",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Framework :: FastAPI",
+]
+dependencies = [
+    "openai>=1.40.0",
+    "python-dotenv>=1.0.0",
+    "httpx>=0.26.0",
+    "pydantic>=2.5.0",
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "sse-starlette>=2.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0",
+]
+all = [
+    "pytest>=8.0.0",
+    "numpy>=1.24.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/datawhalechina/Hello-Agents"
+Documentation = "https://github.com/datawhalechina/Hello-Agents"
+Issues = "https://github.com/datawhalechina/Hello-Agents/issues"
+
+[project.scripts]
+hello-agents = "main:run"
+hello-agents-demo = "demo:main"
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agents*", "context*", "core*", "evaluation*", "llm_client*", "memory*", "observability*", "orchestrator*", "protocols*", "rag*", "routers*", "tools*"]
+exclude = ["tests*", "data*", "__pycache__*", ".pytest_cache*"]
+
+[tool.setuptools.package-data]
+"data" = ["**/*.json", "**/*.jsonl", "**/*.md", "**/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]

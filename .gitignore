@@ -1,0 +1,65 @@
+# ============================================================
+# PolyAgent — gitignore
+# ============================================================
+
+# secrets / local config
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# virtualenv
+venv/
+.venv/
+env/
+ENV/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.cache
+.tox/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# runtime data (knowledge-base caches, persistence, traces)
+data/knowledge_base/*.vectors.json
+data/knowledge_base/cache/
+data/knowledge_base/.loader_cache/
+data/memory/
+data/test_memory/
+data/test_traces/
+data/traces/
+data/eval/
+*.log
+logs/
