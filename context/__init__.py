@@ -1,4 +1,4 @@
-"""context 包 — 上下文工程 (hello-agents 第九章 GSSC)"""
+"""context 包 — 上下文工程 (polyagent 第九章 GSSC)"""
 from context.builder import ContextBuilder
 from context.compressor import ContextCompressor
 from context.config import ContextConfig

@@ -1,7 +1,7 @@
 """
 ANP (Agent Network Protocol) 核心实现
 
-参考 hello-agents 第十章 4 节设计，提供：
+参考 polyagent 第十章 4 节设计，提供：
 - ANPDiscovery: 服务发现中心
 - ANPRouter: 智能路由器
 - ANPAgentInfo: 智能体信息

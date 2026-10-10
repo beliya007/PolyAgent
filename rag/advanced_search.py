@@ -1,7 +1,7 @@
 """
 高级检索策略 (Advanced Search Strategies)
 
-hello-agents 第八章完整实现:
+polyagent 第八章完整实现:
 - MQE (Multi-Query Expansion):用 LLM 生成多样化查询
 - HyDE (Hypothetical Document Embeddings):用答案找答案
 - 统一的扩展检索框架:expansion → search → dedup → rank
@@ -11,7 +11,7 @@ from __future__ import annotations
 import re
 from typing import Any, Callable, Dict, List, Optional, Sequence
 
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 
 
 # ============================================================
@@ -24,7 +24,7 @@ _MQE_SYSTEM = (
 _MQE_USER_TPL = "原始查询:{query}\n请给出{n}个不同表述的查询,每行一个。"
 
 
-def _prompt_mqe(query: str, n: int = 2, llm: Optional[HelloAgentsLLM] = None) -> List[str]:
+def _prompt_mqe(query: str, n: int = 2, llm: Optional[PolyAgentLLM] = None) -> List[str]:
     """用 LLM 生成 {n} 个语义等价的查询"""
     if not query:
         return []
@@ -56,7 +56,7 @@ _HYDE_SYSTEM = (
 _HYDE_USER_TPL = "问题:{query}\n请直接写一段中等长度、客观、包含关键术语的段落。"
 
 
-def _prompt_hyde(query: str, llm: Optional[HelloAgentsLLM] = None) -> Optional[str]:
+def _prompt_hyde(query: str, llm: Optional[PolyAgentLLM] = None) -> Optional[str]:
     """让 LLM 写一段假设性答案,用于缩小 q↔d 语义鸿沟"""
     if not query:
         return None
@@ -85,7 +85,7 @@ def search_with_expansion(
     mqe_expansions: int = 2,
     enable_hyde: bool = False,
     candidate_pool_multiplier: int = 4,
-    llm: Optional[HelloAgentsLLM] = None,
+    llm: Optional[PolyAgentLLM] = None,
 ) -> List[Dict[str, Any]]:
     """统一的扩展检索入口(用于任意 retrieve_fn)
 
@@ -135,10 +135,10 @@ def search_with_expansion(
 # ============================================================
 #  辅助:安全获取 LLM 实例
 # ============================================================
-def _try_llm() -> Optional[HelloAgentsLLM]:
+def _try_llm() -> Optional[PolyAgentLLM]:
     try:
-        from llm_client import HelloAgentsLLM  # type: ignore
-        return HelloAgentsLLM()
+        from llm_client import PolyAgentLLM  # type: ignore
+        return PolyAgentLLM()
     except Exception:
         return None
 

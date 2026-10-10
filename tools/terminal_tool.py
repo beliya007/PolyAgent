@@ -1,5 +1,5 @@
 """
-终端工具 (TerminalTool) — hello-agents 第九章 §9.5
+终端工具 (TerminalTool) — polyagent 第九章 §9.5
 
 设计要点:
 - 默认基于 Python 内置实现(跨 Windows/Linux),不直接开 subprocess

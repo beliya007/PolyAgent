@@ -1,5 +1,5 @@
 """
-FastAPI entry point for the Hello-Agents service.
+FastAPI entry point for the PolyAgent service.
 
 A pure-Python, modular multi-agent framework:
   - 4 agent paradigms (Simple / ReAct / Plan-and-Solve / Reflection)
@@ -37,7 +37,7 @@ logger = logging.getLogger(__name__)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("=" * 60)
-    logger.info("Hello-Agents service starting")
+    logger.info("PolyAgent service starting")
     logger.info("Pipeline: intent -> plan -> execute -> reflect")
     logger.info(
         "Capabilities: 4 paradigms, 4 memory types (persistent), "
@@ -51,11 +51,11 @@ async def lifespan(app: FastAPI):
     except Exception as e:  # noqa: BLE001
         logger.warning(f"CentralRouter warm-up failed: {e}")
     yield
-    logger.info("Hello-Agents service shutting down")
+    logger.info("PolyAgent service shutting down")
 
 
 app = FastAPI(
-    title="Hello-Agents",
+    title="PolyAgent",
     version="1.0.0",
     description="""
 A modular multi-agent framework that ships with:
@@ -86,7 +86,7 @@ app.include_router(stream_router, prefix="/api/agent", tags=["stream"])
 @app.get("/")
 async def root():
     return {
-        "service": "hello-agents",
+        "service": "polyagent",
         "version": "1.0.0",
         "docs": "/docs",
         "health": "/api/agent/health",

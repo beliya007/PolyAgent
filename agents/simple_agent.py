@@ -9,7 +9,7 @@ from typing import Iterator, Optional
 
 from agents.base import BaseAgent
 from core.message import Message
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 from tools.registry import ToolRegistry
 
 
@@ -29,7 +29,7 @@ class SimpleAgent(BaseAgent):
     def __init__(
         self,
         name: str = "SimpleAgent",
-        llm: Optional[HelloAgentsLLM] = None,
+        llm: Optional[PolyAgentLLM] = None,
         system_prompt: Optional[str] = None,
         tool_registry: Optional[ToolRegistry] = None,
     ):

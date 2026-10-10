@@ -1,7 +1,7 @@
 """
 可观测性模块 (Observability)
 
-基于 hello-agents 第十二章:
+基于 polyagent 第十二章:
 - 调用追踪(Tracer):每次 LLM 调用记录
 - 结构化日志(Logger)
 """

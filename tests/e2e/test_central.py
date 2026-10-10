@@ -5,7 +5,7 @@ import time
 BASE = "http://127.0.0.1:8000"
 
 print("=" * 60)
-print("Hello-Agents — central router test")
+print("PolyAgent — central router test")
 print("=" * 60)
 
 

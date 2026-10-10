@@ -1,7 +1,7 @@
 """
 上下文候选信息包 (ContextPacket)
 
-hello-agents 第九章 §9.3.2:
+polyagent 第九章 §9.3.2:
 - 候选信息包是 GSSC 流水线的基本单元
 - 每个 packet 携带 content / timestamp / token_count / relevance_score / metadata
 - metadata["type"] 决定 Structure 阶段它会落到 [Role&Policies] / [Evidence] / [Context] / [State] 哪个分区

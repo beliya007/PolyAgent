@@ -8,13 +8,13 @@ from __future__ import annotations
 
 from typing import List
 
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 
 
 class Embedder:
-    """Embedding 客户端,封装 HelloAgentsLLM 的 embed 接口"""
+    """Embedding 客户端,封装 PolyAgentLLM 的 embed 接口"""
 
-    def __init__(self, llm: HelloAgentsLLM):
+    def __init__(self, llm: PolyAgentLLM):
         self.llm = llm
         self.dimension = 1024  # text-embedding-v3 默认
 

@@ -1,7 +1,7 @@
 """
 统一嵌入服务 (Embedding Service)
 
-hello-agents 第八章设计:
+polyagent 第八章设计:
 - 首选 DashScope(通义千问)云端 API
 - 降级到本地 sentence-transformers
 - 再次降级到 TF-IDF 轻量级兜底

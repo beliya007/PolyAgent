@@ -1,7 +1,7 @@
 """
 RAG 工具 (RAGTool)
 
-hello-agents 第八章 RAG 设计:
+polyagent 第八章 RAG 设计:
 - 文档摄取(Loader → Chunker → Embedder → VectorStore)
 - 检索(query → Embedder → top_k)
 - 自动降级:Embedding 失败时回退 BM25
@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Union
 
 from config import get_config
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 from rag.advanced_search import search_with_expansion
 from rag.chunker import Chunk, MarkdownChunker, TextChunker
 from rag.embedder import Embedder
@@ -30,7 +30,7 @@ class RAGTool:
 
     def __init__(
         self,
-        llm: HelloAgentsLLM,
+        llm: PolyAgentLLM,
         knowledge_base_path: Optional[str] = None,
         namespace: str = "default",
         chunk_size: Optional[int] = None,

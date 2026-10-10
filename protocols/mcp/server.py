@@ -1,7 +1,7 @@
 """
 MCP 服务器实现
 
-参考 hello-agents 第十章设计，提供 MCP 服务器功能：
+参考 polyagent 第十章设计，提供 MCP 服务器功能：
 - 基于 FastMCP 封装
 - 支持工具、资源、提示模板定义
 - 自动处理 Stdio 传输

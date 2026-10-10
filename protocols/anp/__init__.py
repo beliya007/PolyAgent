@@ -1,7 +1,7 @@
 """
 ANP (Agent Network Protocol) 子模块
 
-参考 hello-agents 第十章 4 节设计,实现大规模智能体网络协议。
+参考 polyagent 第十章 4 节设计,实现大规模智能体网络协议。
 
 ANP 协议设计理念:
 - 去中心化服务发现

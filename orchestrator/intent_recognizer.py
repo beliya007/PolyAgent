@@ -13,7 +13,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
 
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 
 
 # Default intent taxonomy. Keep it small and generic.
@@ -93,7 +93,7 @@ User input: {query}
 
     def __init__(
         self,
-        llm: HelloAgentsLLM,
+        llm: PolyAgentLLM,
         intent_types: Optional[List[str]] = None,
         intent_to_mode: Optional[Dict[str, str]] = None,
         prompt_template: Optional[str] = None,

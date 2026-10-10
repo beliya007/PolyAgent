@@ -1,7 +1,7 @@
 """
 上下文构建配置
 
-基于 hello-agents 第九章 GSSC 流水线:
+基于 polyagent 第九章 GSSC 流水线:
 - 控制上下文长度、保留比例、压缩阈值
 - recency_weight / relevance_weight 用于 Select 阶段评分
 """

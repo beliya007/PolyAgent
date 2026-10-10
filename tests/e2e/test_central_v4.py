@@ -5,7 +5,7 @@ import time
 BASE = "http://127.0.0.1:8000"
 
 print("=" * 70)
-print("Hello-Agents — full pipeline test")
+print("PolyAgent — full pipeline test")
 print("=" * 70)
 
 query = "Generate 2 UUIDs and tell me their total character count."

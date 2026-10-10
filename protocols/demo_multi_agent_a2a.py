@@ -163,8 +163,8 @@ class GenericA2ACoordinator:
             "planner": A2ATool.from_server(self.planner, name="planner"),
         }
 
-        self.auth = AuthManager(secret_key="hello-agents-a2a-secret")
-        self.signer = MessageSigner(secret_key="hello-agents-a2a-signing")
+        self.auth = AuthManager(secret_key="polyagent-a2a-secret")
+        self.signer = MessageSigner(secret_key="polyagent-a2a-signing")
         self.secure_servers = {
             "calculator": SecureA2AServer(self.calculator, self.auth, self.signer),
             "knowledge": SecureA2AServer(self.knowledge, self.auth, self.signer),
@@ -312,7 +312,7 @@ def demo_anp_identity_mesh() -> None:
     path = mesh.find_path("agent_a", "agent_c")
     print(f"  agent_a -> agent_c path: {' -> '.join(path) if path else 'unreachable'}")
 
-    bus = SecureMessageBus(secret_key="hello-agents-anp-bus")
+    bus = SecureMessageBus(secret_key="polyagent-anp-bus")
     for ident in identities:
         bus.register_identity(ident)
     msg_id = bus.send(
@@ -331,7 +331,7 @@ def demo_anp_identity_mesh() -> None:
 # ============================================================
 def main() -> None:
     print("=" * 70)
-    print("Hello-Agents — generic multi-agent A2A / ANP demo")
+    print("PolyAgent — generic multi-agent A2A / ANP demo")
     print("=" * 70)
     print(
         """

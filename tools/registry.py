@@ -1,7 +1,7 @@
 """
 工具注册表 (ToolRegistry)
 
-基于 hello-agents 第七章:
+基于 polyagent 第七章:
 - register_tool(tool):注册一个 Tool
 - get_tool(name):按名获取
 - list_tools():列出所有工具名

@@ -1,7 +1,7 @@
 """
 核心消息类
 
-基于 hello-agents 第七章 + OpenAI function calling 协议。
+基于 polyagent 第七章 + OpenAI function calling 协议。
 """
 from __future__ import annotations
 

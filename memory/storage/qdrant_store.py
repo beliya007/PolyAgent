@@ -1,7 +1,7 @@
 """
 Qdrant 向量存储 (QdrantVectorStore)
 
-hello-agents 第八章:
+polyagent 第八章:
 - 高性能向量检索(基于 Qdrant Cloud 或本地 Docker)
 - 支持 metadata 过滤 + 余弦/欧氏距离
 - 缺失 qdrant-client 时,自动回落到 MemoryVectorStore,保证代码可运行
@@ -9,7 +9,7 @@ hello-agents 第八章:
 环境变量:
   QDRANT_URL              e.g. https://xxx.qdrant.tech:6333
   QDRANT_API_KEY          可选
-  QDRANT_COLLECTION       集合名,默认 hello_agents_vectors
+  QDRANT_COLLECTION       集合名,默认 polyagent_vectors
   QDRANT_VECTOR_SIZE      向量维度,默认 1024
   QDRANT_DISTANCE         cosine / dot / euclid
 """
@@ -38,7 +38,7 @@ class QdrantVectorStore(BaseVectorStore):
     ) -> None:
         self.url = url or os.getenv("QDRANT_URL", "")
         self.api_key = api_key or os.getenv("QDRANT_API_KEY", "")
-        self.collection = collection or os.getenv("QDRANT_COLLECTION", "hello_agents_vectors")
+        self.collection = collection or os.getenv("QDRANT_COLLECTION", "polyagent_vectors")
         self.vector_size = int(vector_size or os.getenv("QDRANT_VECTOR_SIZE", "1024"))
         self.distance = (distance or os.getenv("QDRANT_DISTANCE", "Cosine")).lower()
         self.timeout = int(os.getenv("QDRANT_TIMEOUT", str(timeout)))

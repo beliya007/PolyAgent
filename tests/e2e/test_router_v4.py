@@ -5,7 +5,7 @@ import time
 BASE = "http://127.0.0.1:8000"
 
 print("=" * 70)
-print("Hello-Agents — full central router pipeline")
+print("PolyAgent — full central router pipeline")
 print("=" * 70)
 
 test_cases = [

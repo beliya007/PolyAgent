@@ -1,6 +1,6 @@
 # MCP 协议模块
 
-基于 hello-agents 第十章设计实现的 Model Context Protocol (MCP) 协议模块。
+基于 polyagent 第十章设计实现的 Model Context Protocol (MCP) 协议模块。
 
 ## 目录结构
 
@@ -180,6 +180,6 @@ python -m protocols.mcp.test_mcp
 
 ## 参考
 
-- [hello-agents 第十章](https://github.com/datawhalechina/Hello-Agents)
+- [polyagent 第十章](https://github.com/datawhalechina/PolyAgent)
 - [MCP 官方文档](https://modelcontextprotocol.io/)
 - [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers)

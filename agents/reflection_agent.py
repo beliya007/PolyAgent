@@ -10,7 +10,7 @@ from typing import Iterator, List, Optional
 
 from agents.base import BaseAgent
 from core.message import Message
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 
 
 DEFAULT_INITIAL_PROMPT = """You are an expert in the requested domain. Produce a
@@ -92,7 +92,7 @@ class ReflectionAgent(BaseAgent):
     def __init__(
         self,
         name: str = "ReflectionAgent",
-        llm: Optional[HelloAgentsLLM] = None,
+        llm: Optional[PolyAgentLLM] = None,
         tool_registry=None,
         max_iterations: int = 3,
         system_prompt: Optional[str] = None,

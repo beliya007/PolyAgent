@@ -1,7 +1,7 @@
 """
 上下文构建器 (ContextBuilder)
 
-hello-agents 第九章 §9.3 GSSC 流水线:
+polyagent 第九章 §9.3 GSSC 流水线:
     Gather     — 从系统指令 / 时间 / RAG / 记忆 / 对话历史 / 笔记 / 终端 汇集候选
     Select     — 计算 relevance × recency 综合分,贪心填满 token 预算
     Structure  — 渲染为 [Role & Policies] / [Task] / [State] / [Evidence] / [Context] / [Output] 模板

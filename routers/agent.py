@@ -293,7 +293,7 @@ async def llm_stats():
 
 @router.get("/health", summary="Health check")
 async def health():
-    return {"status": "healthy", "service": "hello-agents"}
+    return {"status": "healthy", "service": "polyagent"}
 
 
 @router.get("/stats", summary="System overview")

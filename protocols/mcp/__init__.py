@@ -1,7 +1,7 @@
 """
 MCP (Model Context Protocol) 子模块
 
-参考 hello-agents 第十章设计，实现智能体与工具的标准化通信协议。
+参考 polyagent 第十章设计，实现智能体与工具的标准化通信协议。
 
 MCP 协议设计理念：
 - 标准化接口：不同服务提供统一的访问方式

@@ -1,5 +1,5 @@
 """
-笔记工具 (NoteTool) — hello-agents 第九章 §9.4
+笔记工具 (NoteTool) — polyagent 第九章 §9.4
 
 设计要点:
 - 每篇笔记是独立 .md 文件,YAML 前置元数据 + Markdown 正文

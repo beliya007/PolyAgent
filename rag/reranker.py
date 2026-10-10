@@ -1,7 +1,7 @@
 """
 RAG 重排序 (Reranker)
 
-hello-agents 第八章:
+polyagent 第八章:
 - 用 LLM 对初筛结果做相关性重排序
 - 提升检索精度
 """
@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from typing import Any, Dict, List
 
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 
 
 RERANK_PROMPT = """你是相关性评估专家,请对候选文档与查询的相关性打分(0~10)。
@@ -28,7 +28,7 @@ RERANK_PROMPT = """你是相关性评估专家,请对候选文档与查询的相
 class LLMReranker:
     """基于 LLM 的重排序器"""
 
-    def __init__(self, llm: HelloAgentsLLM, enabled: bool = True):
+    def __init__(self, llm: PolyAgentLLM, enabled: bool = True):
         self.llm = llm
         self.enabled = enabled
 

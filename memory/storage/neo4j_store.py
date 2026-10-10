@@ -1,7 +1,7 @@
 """
 Neo4j 图存储 (Neo4jGraphStore)
 
-hello-agents 第八章设计:
+polyagent 第八章设计:
 - 知识图谱:节点 = Entity,边 = 关系
 - 支持 Cypher 查询
 - 缺失 neo4j 驱动时,降级为 MemoryGraphStore,保证代码可运行

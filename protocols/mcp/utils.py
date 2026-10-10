@@ -1,7 +1,7 @@
 """
 MCP 工具函数
 
-参考 hello-agents 第十章设计，提供 MCP 相关的工具函数：
+参考 polyagent 第十章设计，提供 MCP 相关的工具函数：
 - 工具格式转换（OpenAI schema / MCP schema）
 - 上下文创建与解析
 - 类型转换

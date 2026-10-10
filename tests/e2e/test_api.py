@@ -5,7 +5,7 @@ import time
 BASE = "http://127.0.0.1:8000"
 
 print("=" * 70)
-print("Hello-Agents — staged API test")
+print("PolyAgent — staged API test")
 print("=" * 70)
 
 

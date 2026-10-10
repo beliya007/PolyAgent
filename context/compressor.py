@@ -1,7 +1,7 @@
 """
 上下文压缩器 (ContextCompressor)
 
-hello-agents 第九章 §9.3.3 Compress 阶段:
+polyagent 第九章 §9.3.3 Compress 阶段:
 - 兜底压缩超 token 预算的上下文
 - 支持两种策略:
     1. partition_compress: 按 [Role]/[Task]/[Evidence]/... 分区截断,保结构
@@ -13,7 +13,7 @@ import json
 import re
 from typing import Any, Dict, List, Optional
 
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 
 
 # 粗估:中文 1.5 字符/token,英文 4 字符/token(与 builder 保持一致)
@@ -56,7 +56,7 @@ class ContextCompressor:
 
     def __init__(
         self,
-        llm: Optional[HelloAgentsLLM] = None,
+        llm: Optional[PolyAgentLLM] = None,
         max_tokens: int = 2000,
         truncate_floor: int = 50,
     ):

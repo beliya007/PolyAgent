@@ -20,7 +20,7 @@ import time
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Sequence
 
-from llm_client import HelloAgentsLLM, tool_to_openai_schema
+from llm_client import PolyAgentLLM, tool_to_openai_schema
 from memory.manager import MemoryManager
 from orchestrator.planner import Plan, PlanStep
 from rag.rag_tool import RAGTool
@@ -89,7 +89,7 @@ class Executor:
 
     def __init__(
         self,
-        llm: HelloAgentsLLM,
+        llm: PolyAgentLLM,
         tool_registry: ToolRegistry,
         rag_tool: Optional[RAGTool] = None,
         memory: Optional[MemoryManager] = None,

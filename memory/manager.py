@@ -1,7 +1,7 @@
 """
 记忆管理器 (MemoryManager)
 
-hello-agents 第八章组合模式 + 多后端存储:
+polyagent 第八章组合模式 + 多后端存储:
 - 统一管理 4 种记忆 + 三类存储(向量/图/文档)
 - 提供 search_all / add / consolidate / forget 等高级操作
 - 支持选择性启用记忆类型

@@ -1,7 +1,7 @@
 """
 记忆抽象基类
 
-hello-agents 第八章:
+polyagent 第八章:
 - 四种记忆类型(working / episodic / semantic / perceptual)
 - 统一接口:add / search / clear / stats
 - 支持时间衰减、BM25 检索

@@ -1,7 +1,7 @@
 """
 文档加载器 (Document Loader) - MarkItDown 风格完整实现
 
-参考 hello-agents 第八章 _convert_to_markdown 设计:
+参考 polyagent 第八章 _convert_to_markdown 设计:
 
 支持的格式 (统一转换为 Markdown 中间表示):
     - 文档    : PDF / DOCX / PPTX / XLSX
@@ -1094,7 +1094,7 @@ def get_default_registry() -> ConverterRegistry:
 def convert_to_markdown(path: Union[str, Path]) -> str:
     """MarkItDown 风格的统一入口:任何文件 → Markdown 字符串
 
-    与 hello-agents 第八章 _convert_to_markdown 等价:
+    与 polyagent 第八章 _convert_to_markdown 等价:
         - 文件不存在返回 ""
         - 各 converter 失败时降级到下一个,最终降级纯文本
     """

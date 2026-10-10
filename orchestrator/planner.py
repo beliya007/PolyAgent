@@ -14,7 +14,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 from orchestrator.intent_recognizer import IntentResult
 
 
@@ -99,7 +99,7 @@ class Planner:
 
     def __init__(
         self,
-        llm: HelloAgentsLLM,
+        llm: PolyAgentLLM,
         prompt_template: Optional[str] = None,
         actions: Optional[List[str]] = None,
     ) -> None:

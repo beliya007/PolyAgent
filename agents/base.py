@@ -1,7 +1,7 @@
 """
 Agent 基类
 
-基于 hello-agents 第七章:
+基于 polyagent 第七章:
 - 所有 Agent 都继承自 BaseAgent
 - 提供消息历史 / 上下文管理 / LLM 调用封装
 - 支持原生 function calling(tools)
@@ -15,7 +15,7 @@ from abc import ABC, abstractmethod
 from typing import Any, Dict, Iterator, List, Optional, Tuple
 
 from core.message import Message, ToolCall, ToolResult
-from llm_client import HelloAgentsLLM, tool_to_openai_schema
+from llm_client import PolyAgentLLM, tool_to_openai_schema
 from tools.async_executor import AsyncToolExecutor
 from tools.chain import ToolChain, ToolChainManager
 from tools.registry import ToolRegistry
@@ -27,7 +27,7 @@ class BaseAgent(ABC):
     def __init__(
         self,
         name: str,
-        llm: HelloAgentsLLM,
+        llm: PolyAgentLLM,
         system_prompt: Optional[str] = None,
         tool_registry: Optional[ToolRegistry] = None,
         max_async_workers: int = 4,
@@ -51,7 +51,7 @@ class BaseAgent(ABC):
         print(f"✅ {name} 初始化完成")
 
     # ===================================================================
-    #  同步链式 + 异步并行(hello-agents 7.5.4)
+    #  同步链式 + 异步并行(polyagent 7.5.4)
     # ===================================================================
     @property
     def chain_manager(self) -> Optional[ToolChainManager]:

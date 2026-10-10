@@ -2,7 +2,7 @@
 工具链 (ToolChain / ToolChainManager)
 
 支持多个工具按顺序执行的链式调用,每一步可引用上一步输出。
-借鉴 hello-agents 第七章 7.5.4(1) 的设计,并做了工程化增强:
+借鉴 polyagent 第七章 7.5.4(1) 的设计,并做了工程化增强:
   - ChainStep 支持 input_template 变量替换
   - on_step 回调可插入日志 / 监控 / 短路
   - 返回 ToolResult 而非裸字符串,便于上层判断

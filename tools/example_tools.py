@@ -261,7 +261,7 @@ def create_default_tool_registry() -> ToolRegistry:
     external services. Use it as a quick start or as a reference for
     building your own domain-specific registry::
 
-        from hello_agents import create_default_tool_registry
+        from polyagent import create_default_tool_registry
         from agents import SimpleAgent
         from llm_client import build_llm
 

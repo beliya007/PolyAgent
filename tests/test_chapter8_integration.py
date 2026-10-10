@@ -1,9 +1,9 @@
 """
 Chapter 8 integration test — multi-modal document loading + Markdown chunking
-+ multi-backend storage. Mirrors the hello-agents tutorial.
++ multi-backend storage. Mirrors the polyagent tutorial.
 
 Run:
-  cd hello-agents
+  cd polyagent
   python tests/test_chapter8_integration.py
 """
 from __future__ import annotations

@@ -1,5 +1,5 @@
 """
-Hello-Agents demo — full pipeline tour.
+PolyAgent demo — full pipeline tour.
 
 Demonstrates (all in a domain-neutral way):
 
@@ -385,7 +385,7 @@ def main():
     only_eval = "--eval" in args
 
     print("=" * 70)
-    print("  Hello-Agents — full demo")
+    print("  PolyAgent — full demo")
     print("=" * 70)
 
     if only_eval:

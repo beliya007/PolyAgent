@@ -1,7 +1,7 @@
 """
 MCPTool - MCP 工具包装器
 
-参考 hello-agents 第十章 2.4 节设计，将 MCP 服务器提供的工具包装成 BaseTool，
+参考 polyagent 第十章 2.4 节设计，将 MCP 服务器提供的工具包装成 BaseTool，
 实现工具自动展开机制，让 Agent 可以像调用普通工具一样调用 MCP 工具。
 
 核心特性：

@@ -2,7 +2,7 @@
 Unit tests covering all core modules.
 
 Run:
-  cd hello-agents
+  cd polyagent
   python -m pytest tests/test_all.py -v
   python -m pytest tests/test_all.py::TestMemory -v
   python -m pytest tests/test_all.py::TestRAG -v
@@ -18,7 +18,7 @@ from pathlib import Path
 import pytest
 
 
-# Make `hello_agents` importable
+# Make `polyagent` importable
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 
@@ -179,7 +179,7 @@ class TestRAG:
 # ============================================================
 class TestAgents:
     @pytest.mark.skipif(
-        not Path("./hello-agents/.env").exists() and not Path("./.env").exists(),
+        not Path("./polyagent/.env").exists() and not Path("./.env").exists(),
         reason="LLM_API_KEY required",
     )
     def test_simple_agent(self, llm, tool_registry):
@@ -190,7 +190,7 @@ class TestAgents:
         assert len(result) > 0
 
     @pytest.mark.skipif(
-        not Path("./hello-agents/.env").exists() and not Path("./.env").exists(),
+        not Path("./polyagent/.env").exists() and not Path("./.env").exists(),
         reason="LLM_API_KEY required",
     )
     def test_intent_recognition(self, llm):
@@ -249,7 +249,7 @@ class TestContext:
 # ============================================================
 class TestLLMClient:
     @pytest.mark.skipif(
-        not Path("./hello-agents/.env").exists() and not Path("./.env").exists(),
+        not Path("./polyagent/.env").exists() and not Path("./.env").exists(),
         reason="LLM_API_KEY required",
     )
     def test_llm_invoke(self, llm):
@@ -259,7 +259,7 @@ class TestLLMClient:
         assert len(result) > 0
 
     @pytest.mark.skipif(
-        not Path("./hello-agents/.env").exists() and not Path("./.env").exists(),
+        not Path("./polyagent/.env").exists() and not Path("./.env").exists(),
         reason="LLM_API_KEY required",
     )
     def test_llm_embed(self, llm):
@@ -268,7 +268,7 @@ class TestLLMClient:
         assert len(vecs[0]) > 0
 
     @pytest.mark.skipif(
-        not Path("./hello-agents/.env").exists() and not Path("./.env").exists(),
+        not Path("./polyagent/.env").exists() and not Path("./.env").exists(),
         reason="LLM_API_KEY required",
     )
     def test_llm_stats(self, llm):
@@ -282,7 +282,7 @@ class TestLLMClient:
 # ============================================================
 class TestEvaluation:
     @pytest.mark.skipif(
-        not Path("./hello-agents/.env").exists() and not Path("./.env").exists(),
+        not Path("./polyagent/.env").exists() and not Path("./.env").exists(),
         reason="LLM_API_KEY required",
     )
     def test_evaluator(self, llm):

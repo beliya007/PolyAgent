@@ -10,7 +10,7 @@ from typing import Iterator, List, Optional
 
 from agents.base import BaseAgent
 from core.message import Message
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 
 
 PLANNER_PROMPT = """You are an expert planner. Decompose the question into a
@@ -51,7 +51,7 @@ class PlanAndSolveAgent(BaseAgent):
     def __init__(
         self,
         name: str = "PlanAndSolveAgent",
-        llm: Optional[HelloAgentsLLM] = None,
+        llm: Optional[PolyAgentLLM] = None,
         tool_registry=None,
         max_steps: int = 6,
         system_prompt: Optional[str] = None,

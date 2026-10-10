@@ -1,7 +1,7 @@
 """
 ANP 增强模块 - 高级特性
 
-参考 hello-agents 第十章 4.3-4.5 节,实现 ANP 协议的增强特性:
+参考 polyagent 第十章 4.3-4.5 节,实现 ANP 协议的增强特性:
 1. ANP SecureMessage - 加密的智能体间消息
 2. ANP Identity - 基于 DID 的去中心化身份
 3. ANP Mesh - 大规模服务网格

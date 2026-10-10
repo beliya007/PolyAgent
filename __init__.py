@@ -1,5 +1,5 @@
 """
-Hello-Agents — A lightweight multi-agent framework.
+PolyAgent — A lightweight multi-agent framework.
 
 A pure-Python, modular agent framework built around:
 - 4 classic agent paradigms (Simple / ReAct / Plan-and-Solve / Reflection)
@@ -22,7 +22,7 @@ __version__ = "1.0.0"
 # ----------------------------------------------------------------------
 # LLM client
 # ----------------------------------------------------------------------
-from llm_client import HelloAgentsLLM, build_llm, tool_to_openai_schema
+from llm_client import PolyAgentLLM, build_llm, tool_to_openai_schema
 
 # ----------------------------------------------------------------------
 # Core message types
@@ -127,7 +127,7 @@ from observability import Tracer, TraceEvent
 __all__ = [
     "__version__",
     # LLM
-    "HelloAgentsLLM",
+    "PolyAgentLLM",
     "build_llm",
     "tool_to_openai_schema",
     # Core types

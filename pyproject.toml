@@ -3,14 +3,14 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "hello-agents"
+name = "polyagent"
 version = "1.0.0"
-description = "A lightweight, modular multi-agent framework in Python. Inspired by Datawhale's Hello-Agents tutorial and rebuilt from scratch with native OpenAI function calling, FastAPI, MCP/A2A/ANP protocols, and 4 agent paradigms."
+description = "PolyAgent — a lightweight, modular multi-agent framework in Python. Pure-native OpenAI function calling, FastAPI, MCP/A2A/ANP protocols, and 4 agent paradigms."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [
-    { name = "Hello-Agents Contributors" },
+    { name = "PolyAgent Contributors" },
 ]
 keywords = [
     "agent",
@@ -58,13 +58,13 @@ all = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/datawhalechina/Hello-Agents"
-Documentation = "https://github.com/datawhalechina/Hello-Agents"
-Issues = "https://github.com/datawhalechina/Hello-Agents/issues"
+Homepage = "https://github.com/beliya007/PolyAgent"
+Documentation = "https://github.com/beliya007/PolyAgent"
+Issues = "https://github.com/beliya007/PolyAgent/issues"
 
 [project.scripts]
-hello-agents = "main:run"
-hello-agents-demo = "demo:main"
+polyagent = "main:run"
+polyagent-demo = "demo:main"
 
 [tool.setuptools]
 include-package-data = true

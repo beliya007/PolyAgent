@@ -40,7 +40,7 @@ class VectorBackendConfig:
     backend: str = "memory"                                  # memory | qdrant
     url: Optional[str] = None
     api_key: Optional[str] = None
-    collection: str = "hello_agents_vectors"
+    collection: str = "polyagent_vectors"
     vector_size: int = 1024
     distance: str = "cosine"
     timeout: int = 30
@@ -51,7 +51,7 @@ class VectorBackendConfig:
             backend=_env("VECTOR_BACKEND", "memory") or "memory",
             url=_env("QDRANT_URL"),
             api_key=_env("QDRANT_API_KEY"),
-            collection=_env("QDRANT_COLLECTION", "hello_agents_vectors") or "hello_agents_vectors",
+            collection=_env("QDRANT_COLLECTION", "polyagent_vectors") or "polyagent_vectors",
             vector_size=_env_int("QDRANT_VECTOR_SIZE", 1024),
             distance=(_env("QDRANT_DISTANCE", "cosine") or "cosine").lower(),
             timeout=_env_int("QDRANT_TIMEOUT", 30),

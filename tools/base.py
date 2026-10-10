@@ -1,15 +1,15 @@
 """
 工具基类
 
-基于 hello-agents 第七章 Tool 设计:
+基于 polyagent 第七章 Tool 设计:
 - 每个工具是一段可调用的能力
 - 工具元数据(name / description / parameters schema)供 LLM 检索
 - run() / arun() 方法支持两种调用方式:
     1. kwargs 风格: tool.run(name='alice')
     2. dict 风格:   tool.run({'name': 'alice'})
 - schema() 导出 OpenAI function calling 兼容的 schema
-- 同步链式: ToolChain 串接多个工具,每步引用上一步输出(hello-agents 7.5.4)
-- 异步执行: AsyncToolExecutor + tool.aexecute/arun(hello-agents 7.5.4)
+- 同步链式: ToolChain 串接多个工具,每步引用上一步输出(polyagent 7.5.4)
+- 异步执行: AsyncToolExecutor + tool.aexecute/arun(polyagent 7.5.4)
 - ToolResult 提供结构化结果,便于链式组合与统一错误处理
 """
 from __future__ import annotations

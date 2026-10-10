@@ -1,7 +1,7 @@
 """
 A2ATool - A2A 工具包装器
 
-参考 hello-agents 第十章 3.4 节设计，将 A2A 服务包装成 BaseTool，
+参考 polyagent 第十章 3.4 节设计，将 A2A 服务包装成 BaseTool，
 让 Agent 可以像调用普通工具一样调用其他 A2A 智能体的服务。
 
 核心特性：

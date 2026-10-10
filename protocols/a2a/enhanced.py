@@ -1,7 +1,7 @@
 """
 A2A 增强模块 - 高级特性
 
-参考 hello-agents 第十章 3.5-3.7 节,实现 A2A 协议的增强特性:
+参考 polyagent 第十章 3.5-3.7 节,实现 A2A 协议的增强特性:
 1. A2A Streaming - 流式消息传输 (SendMessageStream)
 2. A2A Auth - 基于 Token 的身份认证
 3. A2A Secure - 消息签名与完整性校验

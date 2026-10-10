@@ -252,7 +252,7 @@ def main():
     print("=" * 70)
     print("""
 MCP (Model Context Protocol) 是智能体与外部工具/资源通信的标准协议。
-本模块参考 hello-agents 第十章设计，提供完整的 MCP 协议实现。
+本模块参考 polyagent 第十章设计，提供完整的 MCP 协议实现。
     """)
 
     # 演示 MCP 客户端
@@ -274,7 +274,7 @@ MCP (Model Context Protocol) 是智能体与外部工具/资源通信的标准�
 更多信息请参考:
   - protocols/mcp/README.md
   - protocols/mcp/test_mcp.py
-  - hello-agents/docs/chapter10/第十章 智能体通信协议.md
+  - polyagent/docs/chapter10/第十章 智能体通信协议.md
     """)
 
 

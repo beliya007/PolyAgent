@@ -1,7 +1,7 @@
 """
 SSE 流式响应接口
 
-基于 hello-agents 第七章:
+基于 polyagent 第七章:
 - Server-Sent Events (SSE) 流式返回完整路由过程
 - 支持分阶段输出:意图/计划/执行/反思/答案
 - 兼容所有主流前端(EventSource)

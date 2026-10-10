@@ -1,7 +1,7 @@
 """
 Protocols 模块 - 智能体通信协议实现
 
-基于 hello-agents 第十章设计，提供三种协议：
+基于 polyagent 第十章设计，提供三种协议：
 - MCP (Model Context Protocol): 智能体与工具的标准化通信
 - A2A (Agent-to-Agent Protocol): 智能体间的点对点协作
 - ANP (Agent Network Protocol): 大规模智能体网络

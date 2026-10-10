@@ -1,6 +1,6 @@
 """存储后端抽象层 (Storage Backend Abstraction)
 
-设计参考 hello-agents 第八章:
+设计参考 polyagent 第八章:
 - 三类存储:VectorStore(向量) / GraphStore(图) / DocumentStore(文档)
 - 统一接口:add / search / delete / stats
 - 支持内存/SQLite/Qdrant/Neo4j 等多种实现,可按需切换或组合

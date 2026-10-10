@@ -6,7 +6,7 @@
   - execute_tools_parallel   多个工具并行执行
   - execute_chain_async      同步链的异步包装(在线程池里跑整条链)
 
-借鉴 hello-agents 第七章 7.5.4(2) 的设计:
+借鉴 polyagent 第七章 7.5.4(2) 的设计:
 当工具标了 is_async_native=True 时,直接 await tool.aexecute() 走原生异步路径;
 否则回退到 ThreadPoolExecutor,把同步 execute 包在线程里,避免阻塞事件循环。
 

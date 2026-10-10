@@ -1,4 +1,4 @@
-# 🤖 Hello-Agents
+# 🤖 PolyAgent
 
 > A lightweight, modular multi-agent framework in pure Python.
 > Pure-native OpenAI function calling + FastAPI. **No LangChain dependency.**
@@ -11,7 +11,7 @@
 
 ---
 
-## 🎯 What is Hello-Agents?
+## 🎯 What is PolyAgent?
 
 A **domain-neutral** agent framework. The framework itself knows nothing about
 any specific business problem — you build your own application by writing
@@ -126,7 +126,7 @@ exploratory steps.
 ## 📦 Module layout
 
 ```
-hello-agents/
+polyagent/
 ├── main.py                       FastAPI entry
 ├── llm_client.py                 LLM client (OpenAI compatible)
 ├── config.py                     .env-driven config
@@ -172,7 +172,7 @@ hello-agents/
 ### 1. Install
 
 ```bash
-cd hello-agents
+cd polyagent
 pip install -r requirements.txt
 ```
 
@@ -206,8 +206,8 @@ Then open <http://localhost:8000/docs> for the Swagger UI.
 ### 5. Use it as a library
 
 ```python
-from hello_agents import (
-    HelloAgentsLLM, build_llm,
+from polyagent import (
+    PolyAgentLLM, build_llm,
     ToolRegistry, create_default_tool_registry,
     ReActAgent,
 )
@@ -234,7 +234,7 @@ print(agent.run("Greet Alice in English."))
 ### 6. Or use the central router
 
 ```python
-from hello_agents import chat
+from polyagent import chat
 
 result = chat("What is 12 * 8 + 5?")
 print(result["final_answer"])
@@ -311,4 +311,4 @@ All three are domain-neutral and ship as ready-to-use modules under `protocols/`
 ## 📜 License
 
 MIT
-# PolyAgent
+

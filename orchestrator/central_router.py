@@ -39,7 +39,7 @@ from agents import (
     SimpleAgent,
 )
 from context.builder import ContextBuilder
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 from memory.manager import MemoryManager
 from orchestrator.executor import Executor, ExecutionResult, Plan, PlanStep
 from orchestrator.intent_recognizer import IntentRecognizer, IntentResult
@@ -123,7 +123,7 @@ class CentralRouter:
 
     def __init__(
         self,
-        llm: HelloAgentsLLM,
+        llm: PolyAgentLLM,
         tool_registry: ToolRegistry,
         memory_manager: Optional[MemoryManager] = None,
         rag_tool: Optional[RAGTool] = None,
@@ -157,7 +157,7 @@ class CentralRouter:
         )
         self.reflector = Reflector(llm)
 
-        # Chain + parallel executors (hello-agents 7.5.4)
+        # Chain + parallel executors (polyagent 7.5.4)
         self.chain_manager = ToolChainManager(tool_registry)
         self.async_executor = AsyncToolExecutor(
             tool_registry, max_workers=max_async_workers
@@ -478,7 +478,7 @@ def get_router(
         try:
             rag = RAGTool(
                 llm,
-                namespace="hello_agents",
+                namespace="polyagent",
                 enable_hybrid=True,
                 enable_reranker=enable_reranker,
             )
@@ -487,7 +487,7 @@ def get_router(
 
         try:
             memory = MemoryManager(
-                user_id="hello_agents_user",
+                user_id="polyagent_user",
                 enable_persistence=enable_persistence,
             )
         except Exception:

@@ -1,7 +1,7 @@
 """
 ANPTool - ANP 工具包装器
 
-参考 hello-agents 第十章 4.2 节设计，将 ANP 服务发现封装成 BaseTool，
+参考 polyagent 第十章 4.2 节设计，将 ANP 服务发现封装成 BaseTool，
 让 Agent 可以通过 ANP 发现和调用网络中的其他服务。
 
 核心功能：

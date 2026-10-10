@@ -11,7 +11,7 @@ import re
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 from orchestrator.executor import ExecutionResult
 
 
@@ -78,7 +78,7 @@ class Reflector:
 
     def __init__(
         self,
-        llm: HelloAgentsLLM,
+        llm: PolyAgentLLM,
         prompt_template: Optional[str] = None,
         refine_template: Optional[str] = None,
     ) -> None:

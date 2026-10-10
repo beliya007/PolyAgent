@@ -1,7 +1,7 @@
 """
 SQLite 文档存储 (SQLiteDocumentStore)
 
-hello-agents 第八章设计:
+polyagent 第八章设计:
 - 结构化元数据 + 全文内容
 - SQL WHERE 过滤 / 排序 / 分页
 - 标准库 sqlite3,零外部依赖

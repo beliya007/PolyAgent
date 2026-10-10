@@ -1,7 +1,7 @@
 """
 记忆持久化模块
 
-hello-agents 第八章:
+polyagent 第八章:
 - 基于 JSONL 文件存储,每行一条 MemoryItem
 - 支持按类型分文件、按用户 ID 分目录
 - 启动时自动加载,运行中增量保存

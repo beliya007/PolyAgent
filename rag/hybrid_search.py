@@ -1,7 +1,7 @@
 """
 混合检索 (Hybrid Search)
 
-hello-agents 第八章:
+polyagent 第八章:
 - 向量检索 + BM25 关键词检索加权融合
 - 提高召回率(向量)与精确度(BM25)
 - 加权公式: score = α * vector_sim + (1-α) * bm25_score

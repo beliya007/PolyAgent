@@ -1,10 +1,10 @@
 """
 文本分块器 (Chunker)
 
-hello-agents 第八章设计:
+polyagent 第八章设计:
 1. 基础 TextChunker - 按字符数切分,段落优先 + 滑窗重叠
 2. MarkdownChunker    - 标题结构感知 + Token 估算(CJK + 英文)
-   完整复现 hello-agents _split_paragraphs_with_headings + _chunk_paragraphs
+   完整复现 polyagent _split_paragraphs_with_headings + _chunk_paragraphs
 """
 from __future__ import annotations
 
@@ -137,7 +137,7 @@ class TextChunker:
 class MarkdownChunker:
     """Markdown 结构感知分块器
 
-    完整复现 hello-agents 第八章 _split_paragraphs_with_headings + _chunk_paragraphs:
+    完整复现 polyagent 第八章 _split_paragraphs_with_headings + _chunk_paragraphs:
       1. 解析标题层次 (#/##/###/...) 并维持栈
       2. 按空行分段,记录每段的 heading_path
       3. 按 token 数累积;超出阈值则切片,保留 overlap

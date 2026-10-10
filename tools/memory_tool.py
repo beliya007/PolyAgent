@@ -1,7 +1,7 @@
 """
 记忆工具 (MemoryTool)
 
-hello-agents 第八章 MemoryTool 设计:
+polyagent 第八章 MemoryTool 设计:
 - 作为 Agent 可调用的工具,统一入口分发到 MemoryManager
 - 支持操作:add / search / summary / stats / update / remove /
   forget / consolidate / clear_all / get

@@ -1,7 +1,7 @@
 """
 评估模块 (Evaluation)
 
-基于 hello-agents 第十二章:
+基于 polyagent 第十二章:
 - 回答质量评估
 - 工具调用成功率
 - 执行效率评估
@@ -11,7 +11,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional
 
-from llm_client import HelloAgentsLLM
+from llm_client import PolyAgentLLM
 
 
 @dataclass
@@ -59,7 +59,7 @@ EVALUATE_PROMPT = """你是质量评估专家,请对以下 Agent 回答打分。
 class Evaluator:
     """评估器"""
 
-    def __init__(self, llm: HelloAgentsLLM):
+    def __init__(self, llm: PolyAgentLLM):
         self.llm = llm
 
     def evaluate(

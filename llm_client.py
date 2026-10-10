@@ -1,7 +1,7 @@
 """
 LLM 客户端
 
-基于 hello-agents 第四章 + 第七章 + 第十章设计:
+基于 polyagent 第四章 + 第七章 + 第十章设计:
 - 单一第三方依赖: openai SDK
 - 兼容 OpenAI 接口(支持阿里云百炼 / OpenAI / Ollama)
 - 支持三种调用:think / stream_invoke / astream
@@ -119,7 +119,7 @@ def tool_to_openai_schema(tool) -> Dict[str, Any]:
 # ============================================================
 #  LLM 客户端
 # ============================================================
-class HelloAgentsLLM:
+class PolyAgentLLM:
     """兼容 OpenAI 接口的 LLM 客户端"""
 
     def __init__(
@@ -545,14 +545,14 @@ class HelloAgentsLLM:
 # ============================================================
 #  便捷工厂
 # ============================================================
-_llm_instance: Optional[HelloAgentsLLM] = None
+_llm_instance: Optional[PolyAgentLLM] = None
 
 
-def build_llm() -> HelloAgentsLLM:
+def build_llm() -> PolyAgentLLM:
     """单例 LLM 客户端"""
     global _llm_instance
     if _llm_instance is None:
-        _llm_instance = HelloAgentsLLM()
+        _llm_instance = PolyAgentLLM()
     return _llm_instance
 
 
@@ -569,7 +569,7 @@ def think(
     messages: List[Dict[str, str]],
     **kwargs,
 ) -> Optional[str]:
-    """兼容 hello-agents 第四章 think 接口"""
+    """兼容 polyagent 第四章 think 接口"""
     return build_llm().invoke(messages, **kwargs)
 
 
